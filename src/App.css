@@ -1,38 +1,119 @@
-.App {
+/*  CSS por Etiqueta */
+body {
   text-align: center;
+  margin: 0;
+  /* tipo fuente google */
+  font-family: 'Roboto', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* class para modelo de cajas  select universal*/
+body * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*  inicio CSS para estados de enlaces*/
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:link {
+  color: #504c4c;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+/* CSS PARA NAV */
+nav {
   display: flex;
-  flex-direction: column;
+  background-color: #282929;
+  color: #ffffff;
+  margin: 0px;
+  text-align: left;
+  padding: 1.25em 4rem;
+  position: sticky;
+  justify-content: space-between;
+  height: 84px;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+} 
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  position: relative;
+  height: 84px;
+  margin-right: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+nav li {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li {
+  margin: 0 1em;
+  text-decoration: none;
+  right: 0;
+  letter-spacing: 5px;
 }
+
+navbar ul li a:hover {
+  color: #ee3535;
+}
+ .nav-link:hover {
+  color: #ee3535;
+}
+.logo {
+  object-fit: cover;
+}
+
+
+p {
+  margin: 15px;
+  padding: 10px;
+  line-height: 140%;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  width: auto;
+}
+
+
+footer {
+  grid-area: footer;
+  width: auto;
+  background: #282929;
+  color: #ffffff;
+  position: sticky;
+  width: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* border: 2px solid blue; */
+
+}
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.card {
+  margin: 20px 20px;
+}
+
+
+
