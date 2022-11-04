@@ -4,17 +4,14 @@ import Items from './Items';
 
 const ItemList = ({items}) => {
   return (
-    <>
+
+    <div className='item-list'>
      {items.map((productos)=> {
-         return (
-            <div className='item-list'>
-                <Items productos={productos} key={productos.id}/>
-            </div>
-         )
-     })
- }
-    </>
-  )
+               return <Items productos={productos} key={productos.id} />;
+            
+     })}
+     </div>
+  );
 }
 export default ItemList;
 
