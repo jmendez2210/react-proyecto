@@ -1,7 +1,7 @@
 import card1 from '../assets/Peugeot/modal-pgt/cardNuevo_3008-2.jpg'
-import Button from '../componentes/Button'
+import Button from '../Ejemplos/Button'
 
-
+///assets/Peugeot/modal-pgt/cardNuevo_3008-2.jpg
 export const Main = (props) => {
     //console.log(props)
     return (

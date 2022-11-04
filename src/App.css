@@ -115,5 +115,20 @@ footer {
   margin: 20px 20px;
 }
 
+.container-fluid {
+    flex-wrap: wrap;
+}
 
+.item-list{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
 
+.item{
+ margin: 12px;
+ border-radius: 8px;
+ flex-wrap: wrap;
+ border-color: black;
+  }

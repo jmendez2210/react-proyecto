@@ -1,5 +1,6 @@
+import React from "react";
 import logo from "../assets/logo/logo-gray.png";
-import Button from '../componentes/Button'
+import Button from '../Ejemplos/Button'
 
 const Nav = () => {
   return (
