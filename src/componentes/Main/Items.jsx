@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 import Button from '../Ejemplos/Button';
 
 const Items = ({productos}) => {
@@ -14,7 +14,8 @@ const Items = ({productos}) => {
                                      <h4 className="card-text">$ {productos.precio}</h4>
                                  </div>
                                  <div className='card-footer'>
-                                 <Button text="Cotizar"/>
+                                  <Link to={`/Detail/${productos.id}`}><Button text="Cotizar"/></Link>
+
                                  </div>
                          </div>
                      </div>

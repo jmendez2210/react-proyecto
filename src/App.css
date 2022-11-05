@@ -132,3 +132,19 @@ flex-wrap: wrap;
  flex-wrap: wrap;
  border-color: black;
   }
+
+.vehiculospeugeot {
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.nav-item{
+  padding: 4px 10px;
+  text-decoration: none;
+  margin: 10px;
+}
+.active {
+  padding: 4px 20px;
+}
+

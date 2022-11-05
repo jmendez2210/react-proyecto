@@ -1,38 +1,28 @@
-import card1 from '../assets/Peugeot/modal-pgt/cardNuevo_3008-2.jpg'
-import Button from '../Ejemplos/Button'
 
-///assets/Peugeot/modal-pgt/cardNuevo_3008-2.jpg
 export const Main = (props) => {
     //console.log(props)
     return (
-        <main className="container-fluid" style={{display:'flex' , justifyContent:'center'}}>
-        <div className={'row'}>
-                   <h2>{props.marcas}</h2>
-             <div className="card" style={{width:" 18rem", justifyContent:'center'}}>
-                     <img src={card1} className="card-img-top" alt="..."/>
-                     <div className="card-body" >
-                         <h5 className="card-title">Card title</h5>
-                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                         <Button text="Cotizar"/>
-                     </div>
-             </div>
-             <div className="card" style={{width:" 18rem", justifyContent:'center'}}>
-                     <img src={card1} className="card-img-top" alt="..."/>
-                     <div className="card-body" >
-                         <h5 className="card-title">Card title</h5>
-                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                         <Button text="Cotizar"/>
-                     </div>
-             </div>
-             <div className="card" style={{width:" 18rem", justifyContent:'center'}}>
-                     <img src={card1} className="card-img-top" alt="..."/>
-                     <div className="card-body" >
-                         <h5 className="card-title">Card title</h5>
-                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                         <Button text="Cotizar"/>
-                     </div>
-             </div>
-         </div>
-     </main>
+        <main className="text-center py-5 mx-5">
+        <div className="container-fluid">
+            <h2 className="titulo pb-3">NUESTROS MARCAS</h2>
+            <div className="row">
+                <div className="col-lg-4 col-md-6 col-sm-12 px-2">
+                    <div>
+                        <img src="https://www.peugeot.cl/content/dam/peugeot/master/b2c/our-range/new-3008-suv/s/PEUGEOT_3008PHEV_2020_025_FR.jpg?imwidth=1920" className="img-fluid vehiculospeugeot" alt=""/>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6 col-sm-12 px-2">
+                    <div>
+                        <img src="https://s3.amazonaws.com/dercocenter.cl/uploads/sites/9/2019/07/2019-mazda-3-hatchback.jpg" className="img-fluid d-flex flex-column justify-content-between vehiculospeugeot" alt=""/>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6 col-sm-12 px-2">
+                    <div>
+                        <img src="https://dercocenter-api.s3.us-east-1.amazonaws.com/images/carcontent/1662411112-ncpLbfp8Xt.webp" className="img-fluid d-flex flex-column justify-content-between vehiculospeugeot" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     );
 }

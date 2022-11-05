@@ -1,12 +1,18 @@
-import { productos } from "../../mock/Productos";
+import React from 'react'
+import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom'
 
-const getProductos = () => {
-    return  new Promise((respuesta,rej) => {
 
-        //productos.find (() =>===prod.id){}
-        setTimeout (() => {
-            respuesta(productos);
+const ItemDetailContainer = () => {
+    const {idproductos} = useParams();
+    console.log(idproductos);
+    console.log(typeof idproductos);
 
-        }, 2000 );
-    });
+  return (
+    <div>
+        <ItemDetail />
+    </div>
+  )
 }
+
+export default ItemDetailContainer;
