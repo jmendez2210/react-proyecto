@@ -13,16 +13,22 @@ const Cart = () => {
     <div className='container' style={{ alignContent:"center", alignItems:"center", textAlign:"center"}}>
       {cart.map((ficha) => (
         <div key={ficha.id} className="card" style={{ alignContent:"center", alignItems:"center", textAlign:"center"}}>
-          <img src={ficha.img} alt={ficha.modelo} width="200px" className="card-img-top"/>
-          <div className="card-body">
-                <h1 className="card-title">{ficha.modelo}</h1>
-               
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">Version: {ficha.version}</li>
-                  <li className="list-group-item">Cantidad: {ficha.cantidad}</li>
-                  <li className="list-group-item">Precio: $ {ficha.precio}</li>
-                </ul>
-                <button type="button" className="btn btn-dark" onClick={() => deleteOne(ficha.id)}>Eliminar Producto</button>
+          <div className="row">
+            <div className='col-md-4' >
+                  <img src={ficha.img} alt={ficha.modelo} className="card-img-top"/>
+            </div>
+            <div className='col-md-8'>
+              <div className="card-body">
+                    <h1 className="card-title">{ficha.modelo}</h1>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">Version: {ficha.version}</li>
+                      <li className="list-group-item">Cantidad: {ficha.cantidad}</li>
+                      <li className="list-group-item">Precio: $ {ficha.precio}</li>
+                    </ul>
+                    <button type="button" className="btn btn-dark" onClick={() => deleteOne(ficha.id)}>Eliminar Producto</button>
+              </div>
+            </div>
+
           </div>
         </div>
       ))}
