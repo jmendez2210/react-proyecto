@@ -70,8 +70,9 @@ const CartProvider = ({ children }) => {
     let total = 0
     const copiaCart = [...cart]
     copiaCart.forEach((prod)=>{
-       // total =  prod.precio * totalProductos.count
-       total = (count += prod.cantidad) * prod.precio
+       
+       //total = (count += prod.cantidad) * prod.precio
+       total = count += prod.cantidad * prod.precio;
     })
     return total
   };
