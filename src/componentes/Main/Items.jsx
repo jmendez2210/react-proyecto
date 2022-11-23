@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Button from '../Ejemplos/Button';
 
 const Items = ({productos}) => {
-  //console.log('Items');
   return (
     <div className={'row'}>
                      <div className={''}>

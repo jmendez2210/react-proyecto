@@ -10,8 +10,7 @@ const ItemDetail = ({ ficha }) => {
     const { addToCart, stockproducto } = useContext(CartContext);
 
     const onAdd = (qty) => {
-      //console.log(qty)
-      setshow(false);
+       setshow(false);
       //agregar la cantidad para el content
       addToCart(ficha, qty);
     };

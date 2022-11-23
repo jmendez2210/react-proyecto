@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebaseConfig";
 
-//import Cart from "../Cart/Cart";
+
 
 const Nav = () => {
     const [secmenu, setMenu] = useState ([]);
@@ -18,7 +18,7 @@ useEffect(() => {
 
   getDocs(marCollection)
   .then((res) => {
-      //console.log(res.docs);
+
       const secciones = res.docs.map((prod) => {
           return {
               id: prod.id,
@@ -32,14 +32,11 @@ useEffect(() => {
   });
 }, []);
 
-//console.log(secmenu);
+
 
   return (
     <nav className="navbar bg-light navbar-expand-lg bg-dark navbar-dark fixed-top ">
       <div className="container-fluid">
-      {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button> */}
         <NavLink to="/">
             <img src={logo} alt="Logo Dumay" className="img-fluid kenburns-top d-block navbar-brand"/>
         </NavLink>
@@ -50,11 +47,6 @@ useEffect(() => {
             ))
             }
 
-            {/* <NavLink className="nav-item" to="/marca/Peugeot"> PEUGEOT</NavLink>
-            <NavLink className="nav-item" to="/marca/Mazda">MAZDA</NavLink>
-            <NavLink className="nav-item" to="/marca/Suzuki">SUZUKI</NavLink>
-            <NavLink className="nav-item" to="/marca/Haval">HAVAL</NavLink>
-           */}
           </ul>
           <ul><Link className='nav-item' to="/Cart"> <CartWidget /></Link></ul>
         </div>

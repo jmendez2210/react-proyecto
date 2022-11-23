@@ -9,14 +9,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Form from './componentes/Form/Formulario';
 import Cart from './componentes/Cart/Cart';
 import CartProvider from './Context/CartContext';
-// import { addDoc, collection } from 'firebase/firestore';
-// import { db } from './services/firebaseConfig';
-// import {productos} from './mock/Productos';
 
-
-// const subirprod = collection(db, 'productos');
-
-// productos.forEach((prod) => addDoc(subirprod, prod)) 
 
 
 function App() {

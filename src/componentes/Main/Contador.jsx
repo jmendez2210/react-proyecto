@@ -12,11 +12,7 @@ function Contador({ stock, onAdd, initial }) {
     const sumar =() =>{
         //condicion ternario
         cantidad < stock && setCantidad (cantidad + 1);
-        //VALIDAR SALDO CANTIDAD
-        // if (cantidad < stock) {
-        //     setCantidad (cantidad + 1 );
-            
-        // }
+      
     }
 
     const restar = () =>{
@@ -25,9 +21,7 @@ function Contador({ stock, onAdd, initial }) {
         }
     };
 
-    // const   reset = () => {
-    //     setCantidad (0);
-    // }
+
     const agregar = () => {
         onAdd(cantidad);
     };

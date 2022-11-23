@@ -1,6 +1,6 @@
 
 export const Main = (props) => {
-    //console.log(props)
+
     return (
         <main className="text-center py-5 mx-5">
         <div className="container">

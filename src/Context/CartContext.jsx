@@ -5,10 +5,10 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  //console.log(props.children);
+
 
   const addToCart = (ficha, cantidad) => {
-    //console.log({...ficha, qty});
+ 
     
     if (isInCart(ficha.id)) {
       sumarCantidad(ficha, cantidad)
@@ -56,7 +56,7 @@ const CartProvider = ({ children }) => {
     })
     return count
   };
-//console.log(totalProductos)
+
 
   //stock del producto
   const stockproducto = (id) => {
@@ -77,7 +77,6 @@ const CartProvider = ({ children }) => {
     return total
   };
 
-    //console.log(cart)
 
   return (
     <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, totalProductos, totalPrecio, stockproducto }}>    

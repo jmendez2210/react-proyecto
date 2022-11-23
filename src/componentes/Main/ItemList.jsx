@@ -4,7 +4,7 @@ import Items from './Items';
 
 const ItemList = memo(
   ({items}) => {
-    //console.log('ItemList');
+  
     return (
   
       <div className='item-list'>
