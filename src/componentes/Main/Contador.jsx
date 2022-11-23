@@ -2,19 +2,21 @@ import  {useState} from 'react'
 
 
 
-function Contador({ stock }) {
+function Contador({ stock, onAdd, initial }) {
     
 
-    const [ cantidad, setCantidad] = useState (0);
+    const [ cantidad, setCantidad] = useState (initial=1);
 
 
     //let x = 0;
     const sumar =() =>{
+        //condicion ternario
+        cantidad < stock && setCantidad (cantidad + 1);
         //VALIDAR SALDO CANTIDAD
-        if (cantidad < stock) {
-            setCantidad (cantidad + 1 );
+        // if (cantidad < stock) {
+        //     setCantidad (cantidad + 1 );
             
-        }
+        // }
     }
 
     const restar = () =>{
@@ -23,9 +25,12 @@ function Contador({ stock }) {
         }
     };
 
-    const   reset = () => {
-        setCantidad (0);
-    }
+    // const   reset = () => {
+    //     setCantidad (0);
+    // }
+    const agregar = () => {
+        onAdd(cantidad);
+    };
 
     return (
     
@@ -33,13 +38,13 @@ function Contador({ stock }) {
                     display: 'flex',
                     justifyContent : 'center',
                     alignItems: 'center',
-                    minHeight:'80vh'}}>
+                    minHeight:'20vh'}}>
         
-        <button disabled={cantidad === 1} onClick={restar} type="button" className="btn btn-primary">-</button>
+        <button disabled={cantidad === 1} onClick={restar} type="button" className="btn btn-dark"> - </button>
         <p> {cantidad} </p>
-        <button disabled={cantidad === stock} onClick={sumar} type="button" className="btn btn-primary">+</button>
+        <button disabled={cantidad === stock} onClick={sumar} type="button" className="btn btn-dark"> + </button>
         <p></p>
-        <button onClick={reset} type="button" className="btn btn-primary">Volver a 0</button>
+        <button type="button" className="btn btn-dark" onClick={agregar}>Agregar al Carrito</button>
     </div>
   )
 }
