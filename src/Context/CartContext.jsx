@@ -45,7 +45,7 @@ const CartProvider = ({ children }) => {
   //funcion para eliminar uno solo
   const deleteOne = (id) => {
     const prodfiltrados = cart.filter((prod) => prod.id !==id); //[{}]
-    setCart([prodfiltrados]);
+    setCart(prodfiltrados);
   };
   //unidades totales para el carrito
   const totalProductos = () =>{
